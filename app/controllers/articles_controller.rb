@@ -1,4 +1,4 @@
-require "html_truncator"
+#require "html_truncator"
 
 class ArticlesController < ApplicationController
   load_and_authorize_resource     #CanCan
@@ -31,6 +31,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
     @article.preview = HTML_Truncator.truncate(@article.body, 300)
 
     respond_to do |format|
