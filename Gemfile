@@ -44,6 +44,9 @@ gem 'paperclip'
 gem 'cancan'	# for authorization
 gem 'devise'	# for authentication
 
+# To truncate html
+gem 'html_truncator'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
