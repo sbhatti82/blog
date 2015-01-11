@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
+  load_and_authorize_resource     #CanCan
+
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+
+  before_filter :authenticate_user!, :except => [:index, :show]
 
   # GET /articles
   # GET /articles.json

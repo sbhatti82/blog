@@ -36,6 +36,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ckeditor'
 gem 'paperclip'
 
+# For Authentication and authorization
+gem 'cancan'	# for authorization
+gem 'devise'	# for authentication
 
 
 group :development, :test do
