@@ -46,6 +46,15 @@
 	</div><!-- /.navbar -->
 <!-- Navigation bar end -->
 
+<!-- Flash messages  for all pages start -->
+<% if notice %>
+	<div class="container alert alert-warning alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<p id="notice"><%= notice %></p>
+	</div>
+<% end %>
+<!-- Flash messages  for all pages end -->
+
 <%= yield %>
 
 </body>
